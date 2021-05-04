@@ -540,19 +540,17 @@ small {
 }
 
 .offer {
+  position: relative;
   background: grey url("../img/offer/offer-bg.png") no-repeat;
   background-size: cover;
   background-position: center;
   padding-top: 64px;
   padding-bottom: 69px;
   color: #ffffff;
-  position: relative;
-  z-index: -2;
   margin-bottom: 87px;
 }
 
-.offer::before {
-  content: '';
+.offer-dark-bg {
   position: absolute;
   display: block;
   width: 100%;
@@ -560,12 +558,11 @@ small {
   top: 0;
   left: 0;
   background-color: rgba(55, 55, 55, 0.7);
-  z-index: -1;
+  z-index: 0;
 }
 
 .offer-form {
-  top: 0;
-  left: 0;
+  position: relative;
   max-width: 611px;
   margin: auto;
   display: -webkit-box;
