@@ -5,7 +5,270 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Стартовый шаблон</title>
     <link rel="stylesheet" href="css/bootstrap-grid.min.css">
-    <link rel="stylesheet" href="css/main.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+        * {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        }
+
+        body {
+        font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+        margin: 0;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p {
+        margin: 0;
+        }
+
+        .main img {
+        width: 100%;
+        }
+
+        .button {
+        font-family: 'Roboto Normal' sans-serif;
+        color: #ffffff;
+        padding: 12px 18px;
+        background-color: #E68D1C;
+        border: none;
+        border-radius: 5px;
+        font-size: 14px;
+        font-weight: 300;
+        cursor: pointer;
+        }
+
+        .button:hover {
+        background-color: #e99933;
+        }
+
+        .button-o {
+        background-color: transparent;
+        color: rgba(55, 55, 55, 0.5);
+        border: solid 1px rgba(55, 55, 55, 0.5);
+        }
+
+        .button-o:hover {
+        background-color: black;
+        }
+
+        .button-big {
+        padding-top: 21px;
+        padding-bottom: 21px;
+        }
+
+        .button img {
+        margin-right: 7px;
+        vertical-align: middle;
+        }
+
+        .form {
+        margin-bottom: 12px;
+        }
+
+        .form input {
+        padding: 21px;
+        font-size: 14px;
+        font-weight: 300;
+        border: none;
+        border-radius: 5px;
+        width: 70%;
+        margin-right: 10px;
+        }
+
+        .form input:placeholder {
+        font-size: 14px;
+        font-weight: 300;
+        color: rgba(55, 55, 55, 0.7);
+        }
+
+        small {
+        display: block;
+        }
+
+        .section-main-title {
+        font-size: 27px;
+        font-weight: bold;
+        line-height: 0.67;
+        color: #313131;
+        margin-bottom: 22px;
+        text-transform: uppercase;
+        text-align: center;
+        }
+
+        .section-main-title::after {
+        content: '';
+        display: block;
+        width: 46px;
+        height: 6px;
+        background-image: url("img/products/curved-line.png");
+        background-repeat: no-repeat;
+        margin: auto;
+        margin-top: 12px;
+        }
+
+        .header {
+        padding-top: 39px;
+        padding-bottom: 15px;
+        }
+
+        .header-menu {
+        position: relative;
+        z-index: 4;
+        width: 23px;
+        height: 18px;
+        border: none;
+        background-color: transparent;
+        }
+
+        .header-menu span {
+        position: absolute;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: #000000;
+        -webkit-transition: all 0.3s;
+        transition: all 0.3s;
+        }
+
+        .header-menu span:first-child {
+        top: 0;
+        }
+
+        .header-menu span:nth-child(2) {
+        top: calc(50% - 1px);
+        }
+
+        .header-menu span:last-child {
+        bottom: 0;
+        }
+
+        .header-menu-active {
+        position: fixed;
+        }
+
+        .header-menu-active span {
+        -webkit-transition: all 0.3s;
+        transition: all 0.3s;
+        }
+
+        .header-menu-active span:first-child {
+        top: calc(50% - 1px);
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        }
+
+        .header-menu-active span:nth-child(2) {
+        display: none;
+        }
+
+        .header-menu-active span:last-child {
+        top: calc(50% - 1px);
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        }
+
+        .header-logo {
+        width: 191px;
+        height: 61px;
+        background: url("img/header-logo.png") no-repeat;
+        background-size: contain;
+        }
+
+        .header-contacts-phones {
+        padding-right: 10px;
+        border-right: 1px solid #DBDBDB;
+        }
+
+        .header-contacts-phone {
+        font-size: 22px;
+        font-weight: 500;
+        line-height: 1;
+        color: #313131;
+        padding-top: 4px;
+        padding-bottom: 4px;
+        margin-right: 14px;
+        }
+
+        .header-contacts-button {
+        margin-left: 22px;
+        }
+
+        .main {
+        position: relative;
+        padding-top: 80px;
+        padding-bottom: 60px;
+        background: #373631 url("img/main/main-bg.jpg") center no-repeat;
+        background-size: cover;
+        }
+
+        .main::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.75);
+        z-index: 0;
+        }
+
+        .main-description {
+        position: relative;
+        color: #ffffff;
+        line-height: 1.02;
+        z-index: 1;
+        }
+
+        .main-description-title {
+        font-size: 41px;
+        font-weight: bold;
+        margin-bottom: 12px;
+        }
+
+        .main-description-subtitle {
+        font-size: 28px;
+        font-weight: normal;
+        margin-bottom: 24px;
+        }
+
+        .main-description-form {
+        background-color: rgba(255, 255, 255, 0.2);
+        padding: 30px;
+        }
+
+        .main-description-form-text {
+        font-size: 20px;
+        font-weight: 300;
+        line-height: 1.5;
+        padding-right: 57px;
+        }
+
+        .main-description-form-text .upper {
+        font-weight: 500;
+        text-transform: uppercase;
+        }
+
+        .main-description-form small {
+        font-size: 14px;
+        font-weight: 300;
+        }
+
+        .main img {
+        position: relative;
+        z-index: 1;
+        }
+    </style>
 </head>
 <body>
     <header class="header">
@@ -371,6 +634,7 @@
             </ul>
         </div>
     <!--Модальные окна и формы-->
+    <link rel="stylesheet" href="css/main.css">
     <script src="js/slider.js"></script>
     <script src="js/jquery-3.6.0.js"></script>
     <script src="js/scripts.js"></script>
