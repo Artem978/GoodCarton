@@ -279,7 +279,7 @@
 
 .offer {
   position: relative;
-  background: grey url("../img/offer/offer-bg.png") no-repeat;
+  background: grey url("../img/offer/offer-bg.webp") no-repeat;
   background-size: cover;
   background-position: center;
   padding-top: 64px;
